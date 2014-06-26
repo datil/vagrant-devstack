@@ -9,7 +9,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # More boxes at http://www.vagrantbox.es/
   config.vm.box = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
 
-  config.vm.network "private_network", ip: "172.16.0.2"
+  # config.vm.network "private_network", ip: "172.16.0.2"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
 
   # Fixes issue: https://github.com/mitchellh/vagrant/issues/1673
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
