@@ -9,6 +9,9 @@ Test OpenStack in your development environment using [Devstack](http://devstack.
 * Install [Vagrant](http://www.vagrantup.com/)
 
 # Running the environment
+
+Running the environment for the first time may take a while. It will download and install Devstack which has a large set of dependencies.
+
 ```
 $ git clone https://github.com/datilmedia/vagrant-devstack.git
 $ cd vagrant-devstack
